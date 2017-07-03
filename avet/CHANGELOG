@@ -1,0 +1,39 @@
+CHANGELOG
+---------
+Version 1.1
+- avet_fabric for assisted execution of the build scripts
+- more cleanup of avet.c
+- removed all options from avet.c itself for reducing codebase (less detectable in the future)
+- added options from avet to make_avet
+- added build scripts
+- added -F for explicit fopen sandbox escape
+- added -X for 64 bit support
+- added -E for explicit usage of avets ASCII encoder
+  users now can use shellcode encoders without avets ASCII encoder
+- fixed compiler warning in make_avet.c
+
+Version 1.0
+- cleanup and reduce code base of avet.c
+- added to public github repo
+- tested with Kali 2 and update README
+- made GPL
+
+Version 0.4
+- translate almost everything to English
+- added some documentation
+- changed ASCII art
+- rewrite some parts for easier usage
+- added -f option to make_avet
+- added evasion with read file from c:\windows\system.ini
+- added build.sh
+
+Version 0.3
+- make_avet added
+
+Version 0.2
+- -u works with Windows 7
+- -p for debugging
+
+Version 0.1
+- -f works with Windows XP and Windows 7
+- -u works with Windows XP
