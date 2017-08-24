@@ -19,13 +19,15 @@ Invoke => powershell
 
 #用法（Usage）：
 
-git clone https://github.com/demonsec666/secist_script.git
+1.git clone https://github.com/demonsec666/secist_script.git
 
-sudo chmod -R 777 .
+2.cd secist_script
 
-3  sudo ./setup.sh
+3. sudo chmod -R 777 .
 
-4. sudo ./secist_script.sh
+4   ./setup.sh
+
+5. ./secist_script.sh
 
 #例子 secist> 7
 
