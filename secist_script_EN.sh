@@ -25,7 +25,7 @@
   msfconsole='1'
   else
   msfconsole='0'
-  fi
+  fi 
   # check msfvenom
   which msfvenom > /dev/null 2>&1
   if [ "$?" -eq "0" ]; then
