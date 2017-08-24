@@ -31,6 +31,12 @@
 
 - ```./secist_script.sh```
 
+## avet安装和使用（Installation && Usage）：
+
+- ```http://tdm-gcc.tdragon.net/download```
+
+- ```http://www.ggsec.cn/MSF8-0.html```
+
 ## 例子 （Example）
 ```
 secist 7
