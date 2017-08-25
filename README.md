@@ -37,6 +37,9 @@
 
 - ```http://www.ggsec.cn/MSF8-0.html```
 
+## 视频(vedio):
+https://www.youtube.com/watch?v=Wg7HuU9Hypw&t=11s
+
 ## 例子 （Example）
 ```
 secist 7
