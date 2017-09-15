@@ -385,7 +385,7 @@ code(){
   echo -e "       secist>请输入你的ip地址: \c"
   read ip
   echo -e "       secist>请输入你的端口: \c"
-  read port
+   read port
 ./ps1encode.rb -i $ip -p $port -a $payload -t cmd
 #对shellcode 输出
 echo ""
