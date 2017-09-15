@@ -31,7 +31,7 @@
 
 - ```./secist_script.sh```
 
-## avet安装和使用（Installation && Usage）：
+## avet & shellcode 安装和使用（Installation && Usage）：
 
 - ```http://tdm-gcc.tdragon.net/download```
 
