@@ -38,6 +38,11 @@
 - ```http://www.ggsec.cn/MSF8-0.html```
 
 
+## mingw32
+- ```echo -e "\ndeb http://us.archive.ubuntu.com/ubuntu trusty main universe" >>/etc/apt/sources.list```
+- ```apt-get update && apt-get install mingw32```
+
+
 ## 视频(vedio):
 
 -  https://www.youtube.com/watch?v=Wg7HuU9Hypw&t=11s
