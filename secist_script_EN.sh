@@ -969,4 +969,4 @@ shellcode1(){
   echo "exploit " >>  resource/handler.rc
   msfconsole -r  resource/handler.rc
 }
-menu
+ menu
