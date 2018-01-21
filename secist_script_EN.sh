@@ -348,7 +348,7 @@ echo -e "    For any questions about the course, you can contact us by the follo
 echo      "             Secist Anniversary Editionv1.7 (secist----2017.7.14)"
 echo -e "                     < My Blog: www.ggsec.cn >"
 echo -e "                    < My Team Blog: www.secist.com>"
-echo "                       Secist's QQ group：532925486 "
+echo "                       Secist's QQ group：307283889 "
 echo "                       Welcome to use my script v1.7"
 echo "            Ps:Please indicate the author when you change the code             "
 echo "                           Translator ：Sid                   "
