@@ -90,8 +90,7 @@ Tool To bypass most A.V - dev-labs
 + 团队博客(Team Blog) 
     + ---->[www.secist.com](http://www.secist.com)
 + Metasploit 系列教程(Metaploit Tutorial)   
-    + ---->[网盘(URL): https://pan.baidu.com/s/1dFzPkJZ](https://pan.baidu.com/s/1dFzPkJZ)
-    + ---->[密码(PSW): █████](./psw.txt)
+    + ---->[网盘(URL): https://pan.baidu.com/s/1kWblUaN](https://pan.baidu.com/s/1kWblUaN)
 + Metasploit 系列教程 第八课(Metaploit Tutorial 8)
     + ---->www.ggsec.cn/MSF8-0.html
 
